@@ -17,8 +17,9 @@ defmodule MapCalculator do
     @type t :: %{
             required(supported_operations()) => number(),
             required(:base) => number(),
-            optional(:modulo) => number()
-            # optional(any()) => any
+            optional(:modulo) => number(),
+            # optional(String.t()) => String.t() - This is supported
+            # optional(any()) => any - This makes the map accept all non-specified keys
           }
 
     @enforce_keys [:base]
